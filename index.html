@@ -141,6 +141,8 @@ Error message and password prompt
 
 <p>This <a class="tc-tiddlylink-external" href="https://tiddlywiki.com" rel="noopener noreferrer" target="_blank">TiddlyWiki</a> contains the following tiddlers:</p><p><ul>
 
+<li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/home</li>
+
 <li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/more-page-actions</li>
 
 <li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/refresh</li>
@@ -181,6 +183,8 @@ Error message and password prompt
 
 <li>$:/themes/tiddlywiki/vanilla</li>
 
+<li>Editing the Lab Handbook</li>
+
 <li>Welcome</li>
 
 </ul>
@@ -197,6 +201,9 @@ Error message and password prompt
 <!--~~ Ordinary tiddlers ~~-->
 
 <div id="storeArea" style="display:none;">
+<div created="20210323193647563" modified="20210323193647563" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/home">
+<pre>show</pre>
+</div>
 <div created="20210323185337846" modified="20210323185337846" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/more-page-actions">
 <pre>show</pre>
 </div>
@@ -10104,13 +10111,13 @@ Error message and password prompt
 <div created="20210323185449560" modified="20210323191319693" title="$:/state/tab/moresidebar-1850697562">
 <pre>$:/core/ui/MoreSideBar/Orphans</pre>
 </div>
-<div created="20210323184927671" modified="20210323185444965" title="$:/state/tab/sidebar--595412856">
-<pre>$:/core/ui/SideBar/More</pre>
+<div created="20210323184927671" modified="20210323192732779" title="$:/state/tab/sidebar--595412856">
+<pre>$:/core/ui/SideBar/Tools</pre>
 </div>
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20210323191339042" list="Welcome" modified="20210323191339042" title="$:/StoryList">
+<div created="20210323191517914" list="$:/ControlPanel [[Editing the Lab Handbook]] Welcome" modified="20210323192747835" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -10221,6 +10228,19 @@ Error message and password prompt
         }
     }
 }</pre>
+</div>
+<div created="20210323191527931" modified="20210323193719684" tags="" title="Editing the Lab Handbook">
+<pre>In order to edit the lab handbook, you must:
+
+# be a member of the &quot;Fluvial Landscape Lab&quot; organization on github.
+# [[Create a Personal Access Token|https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token]] that has &quot;Repo&quot; scope and all subscopes; press the little clipboard icon next to the resulting token to copy it.
+# Open the [[Lab Handbook Control Panel|$:/ControlPanel]]; choose the &quot;Saving&quot; tab and the &quot;GitHub Saver&quot; tab.
+# Enter your github user name and paste the token into the &quot;Password&quot; box.
+# Close the control panel with the checkmark icon (no need to save).
+
+Now, when you make edits to this handbook and save it, the changes will be committed to the github repository and automatically served to the web interface!
+
+''Note&quot;  You will need to repeat this process for each browser or computer you use to edit the wiki.  If you want to make a note of your Personal Authentication Token (e.g., in your phone) it will save you from having to create a new token every time you have to edit the wiki from a different computer.</pre>
 </div>
 <div created="20210323184601749" modified="20210323191449527" tags="" title="Welcome">
 <pre>Welcome to the Fluvial Landscape Lab Handbook!  This online handbook is available to be read by anyone, but can be edited only by members of the Fluvial Landscape Lab.  The purpose of the handbook is to retain institutional knowledge as students come and go.
