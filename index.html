@@ -10266,7 +10266,7 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20210323201110110" modified="20210324010036691" tags="Computers" title="Access Lambda">
+<div created="20210323201110110" modified="20210324010411331" tags="Computers" title="Access Lambda">
 <pre>Lambda can only be accessed via SSH tunnel and, if you are off campus, only if you are logged into the MSU VPN.  
 
 Here are the steps to procure access to Lambda:
@@ -10301,6 +10301,9 @@ These setting will be saved by Remmina as a connection profile.  You can simply 
 * Log on to the MSU VPN.
 * Be sure your private SSH key file is in the .ssh folder of your home directory on your local machine in a file called &quot;id_rsa&quot;.
 * Open terminal and forward local port 8787 (the port RStudio Server listens on) to Lambda's port 8787.  To accomplish this, use `ssh -N yourLambdaUserName@XXX.XXX.XX1.67 -L 8080:XXX.XXX.XX1.67:8787`, being sure to use your Lambda username and replace the X's with the beginning of Lambda's IP address.
+* Importantly, the cursor will not return to this terminal window.  It looks like its hung up, but have faith.  You can minimize the terminal window if you like.
+* Open your browser and head to 127.0.0.1:8787.  You should be prompted to long into R Studio Server with your Lambda username and password.
+* When you are done with R Studio Server, you can go back to the terminal window and press Ctrl-C.  This will terminate the port forwarding and return you to the command prompt.
 
 ''Connecting from Windows''
 
