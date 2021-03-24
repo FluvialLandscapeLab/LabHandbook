@@ -10422,16 +10422,16 @@ Here are on instructions for how to create an SSH key pair:
 * [[Windows|https://www.digitalocean.com/docs/droplets/how-to/add-ssh-keys/create-with-putty/]] (Note: The method referenced here requires that you install [[Putty|https://www.chiark.greenend.org.uk/~sgtatham/putty/]].  If you don't want to install Putty, you can make a key with OpenSSH, now included with windows, but I haven't tested it.  If you prefer, feel free to Google around about OpenSSH, test it, and add instructions here!)
 * [[IOS|https://docs.joyent.com/public-cloud/getting-started/ssh-keys/generating-an-ssh-key-manually/manually-generating-your-ssh-key-in-mac-os-x]]</pre>
 </div>
-<div created="20210324054008350" modified="20210324054531939" tags="Computers HowTo Linux" title="Creating Lambda Users">
+<div created="20210324054008350" modified="20210324054559799" tags="Computers HowTo Linux" title="Creating Lambda Users">
 <pre>The command
 
-&gt; sudo adduser &lt;username&gt;
+` sudo adduser &lt;username&gt;`
 
 creates a user profile after a brief set of questions.  Bash shell is the default, which helps with running techplot and HGS.
 
 Remember to provide sudo privileges if appropriate:
 
-&gt; sudo usermod -aG sudo &lt;username&gt;
+`sudo usermod -aG sudo &lt;username&gt;`
 </pre>
 </div>
 <div created="20210324015714430" modified="20210324044319694" tags="Handbook HowTo" title="Edit the handbook">
