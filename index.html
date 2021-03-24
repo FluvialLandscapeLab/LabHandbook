@@ -195,13 +195,17 @@ Error message and password prompt
 
 <li>Access Lambda</li>
 
-<li>Add a New Topic to Contents</li>
+<li>Add a New Topic to Handbook Contents</li>
 
 <li>Computers</li>
 
 <li>Contents</li>
 
 <li>Create an SSH key Pair</li>
+
+<li>Draft of 'Access Lambda'</li>
+
+<li>Draft of 'Create an SSH key Pair'</li>
 
 <li>Edit the Lab Handbook</li>
 
@@ -10154,7 +10158,7 @@ Error message and password prompt
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20210323200131245" list="[[Add a New Topic to Contents]] [[Create an SSH key Pair]] [[Access Lambda]] Contents [[Edit the Lab Handbook]] Welcome" modified="20210323203433730" title="$:/StoryList">
+<div created="20210323200131245" list="[[Add a New Topic to Handbook Contents]] [[Draft of 'Create an SSH key Pair']] [[Draft of 'Access Lambda']] Contents [[Edit the Lab Handbook]] Welcome" modified="20210323203433730" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -10319,7 +10323,7 @@ These setting will be saved by Remmina as a connection profile.  You can simply 
 * Now you can run Remote Desktop.  When prompted for a server to connect to, '''do not use Lambda's IP address!'''  Instead, use &quot;127.0.0.1:13389&quot;.  This will connect you to local port 13389, which is now forwarded via the SSH tunnel to Lambda.  You will be prompted for your Lambda user name and password.  You may have to enter your password a couple of times...
 * To access R Studio Server, open your browser and head to: https://127.0.0.1:8787.  Again, you will be asked for your Lambda username and password.</pre>
 </div>
-<div created="20210323202936472" modified="20210323203329910" tags="Handbook" title="Add a New Topic to Contents">
+<div created="20210323202936472" modified="20210324010921604" tags="Handbook HowTo" title="Add a New Topic to Handbook Contents">
 <pre>To create a new upper level topic in the topic directory, create a new tiddler and set the name of the tiddler to the topic name.  Then, add the tag 'Contents' to the tiddler.  
 
 To create a new entry beneath any topic, simply tag any tiddler with the name of the subtopic.</pre>
@@ -10331,6 +10335,70 @@ To create a new entry beneath any topic, simply tag any tiddler with the name of
 <pre>&lt;&lt;toc-selective-expandable 'Contents' sort[title]&gt;&gt;</pre>
 </div>
 <div created="20210323201918129" modified="20210323211453220" tags="Computers" title="Create an SSH key Pair">
+<pre>An SSH key pair consists of two files.  The &quot;public&quot; file you can put on any computer.  It's like a lock that you can replicate and install on any computer.  Then, the private file acts like a key to that lock.  So if someone gets hold of your key, they can gain access to any computer that has your lock installed.  You can share the public file with any admin in charge of a computer you want to access.  
+
+Keep the private file safe. ''Do not share your private key with anyone else!''
+
+Here are on instructions for how to create an SSH key pair:
+
+* [[Linux|https://www.howtogeek.com/424510/how-to-create-and-install-ssh-keys-from-the-linux-shell/]]
+* [[Windows|https://www.digitalocean.com/docs/droplets/how-to/add-ssh-keys/create-with-putty/]] (Note: The method referenced here requires that you install [[Putty|https://www.chiark.greenend.org.uk/~sgtatham/putty/]].  If you don't want to install Putty, you can make a key with OpenSSH, now included with windows, but I haven't tested it.  If you prefer, feel free to Google around about OpenSSH, test it, and add instructions here!)
+* [[IOS|https://docs.joyent.com/public-cloud/getting-started/ssh-keys/generating-an-ssh-key-manually/manually-generating-your-ssh-key-in-mac-os-x]]</pre>
+</div>
+<div created="20210323201110110" draft.of="Access Lambda" draft.title="Access Lambda" modified="20210324010842109" tags="Computers HowTo" title="Draft of 'Access Lambda'">
+<pre>Lambda can only be accessed via SSH tunnel and, if you are off campus, only if you are logged into the MSU VPN.  
+
+Here are the steps to procure access to Lambda:
+
+* Enable your computer to [[access the VPN at MSU|https://www.montana.edu/uit/computing/desktop/vpn/index.html]].
+* [[Create an SSH Key pair|Create an SSH key Pair]] and save it in a place where you can find it again;  copy it to any computer you want to use to access Lambda.  ''Please don't email your private key to yourself.''  This could create quite a security hole.  Please use a memory stick to transfer your private key among computers you use. 
+* Email the public part of the SSH pair to the Lambda admin and ask for an account on Lambda.
+
+Once the account is set up, the details for connecting differ by operating system. but conceptually:
+
+* Log on to the MSU VPN if you are off campus.
+* Create an SSH tunnel to Lambda, 
+* Forward the traffic from one of your local ports over the tunnel, to the appropriate port on Lambda
+* Establish a connection (using Remote Desktop, you browser to RStudio server, etc.) to your local port (which is forwarded over the SSH tunnel to Lambda)!
+
+''Connecting to the Lambda Ubuntu IDE from a Linux computer:''
+
+* Log on to the MSU VPN.
+* Be sure your private SSH key file is in the .ssh folder of your home directory on your local machine in a file called &quot;id_rsa&quot;.
+* Install Remmina Remote Desktop Client on your linux computer.
+* Run Remmina and create a new connection profile (using the plus-sign in the upper right corner of the screen).
+* At the top of the screen, give the connection profile a name -- something like `Lambda via RDP` (RDP is &quot;Remote Desktop Protocol&quot;) the set the protocol to RDP.
+* On the Basic Tab enter the IP address of the computer you want to connect to (Lambda's IP ends in 1.67), enter your Lambda User Name.  (I set the Colour Depth to GFX RFX (32 bpp) for a good experience, but requires more bandwidth).  Don't enter your password -- that comes later...
+* On Advanced Tab, I set quality to Best.  Security Protocol Navigation should be `Automatic`, Gateway is `HTTP`.  Sound is `Off` and local microphone is `0`.  Everything else is blank.
+* On SSH Tunnel Tab click &quot;Enable SSH tunnel for Same server at port 22&quot;.  Again, enter your Lambda user name and choose &quot;Public Key&quot;.
+* Click &quot;Save and Connect.&quot;  You may have to enter your Lambda password a couple of times before your connection will be fully established.
+
+These setting will be saved by Remmina as a connection profile.  You can simply open Remmina and click the profile to connect in the future.
+
+''Connecting to the R Studio Server from a Linux computer:''
+
+* Log on to the MSU VPN.
+* Be sure your private SSH key file is in the .ssh folder of your home directory on your local machine in a file called &quot;id_rsa&quot;.
+* Open terminal and forward local port 8787 (the port RStudio Server listens on) to Lambda's port 8787.  To accomplish this, use `ssh -N yourLambdaUserName@XXX.XXX.XX1.67 -L 8080:XXX.XXX.XX1.67:8787`, being sure to use your Lambda username and replace the X's with the beginning of Lambda's IP address.  ''Importantly, the cursor should not return to this terminal window.''  It will look like its hung up, but have faith.  You can minimize the terminal window if you like.
+* Open your browser and head to 127.0.0.1:8787.  You should be prompted to log into R Studio Server with your Lambda username and password.
+* When you are done with R Studio Server, you can go back to the terminal window and press Ctrl-C.  This will terminate the port forwarding and return you to the command prompt.
+
+''Connecting from Windows''
+
+* Be sure your private SSH key file is installed somewhere on your computer and you know where it is.
+* Log on to the University VPN.
+* Open PUTTY.  In the &quot;Session&quot; Category, enter the IP address for Lambda (ends in 1.67) with port 22. Type a name for your session in to the &quot;saved session&quot; box, and click &quot;save.&quot;  You should see the session name appear in the list.
+* Expand the &quot;Connection&quot; category, choose (don't expand) SSH and be sure protocol verion 2 is selected.  Permitted roles can be both upstream and down.
+* Now expand the SSH category and and click on (don't expand) Auth.  Click &quot;Browse...&quot; and select the SSH private key file you generated.
+* Now select the Tunnels Category. You need to add two forwarded ports.  Enter 13389 in the source box and the Lambda's IP address with port 3389 (XXX.XXX.XX1.67:3389) in the destination box.  Choose the &quot;local&quot; and &quot;auto&quot; radio buttons.  Click &quot;Add.&quot;  Do the same thing to map local port 8787 to lambda's port 8787.
+* Return to the Session Category and click &quot;Save&quot; again.
+* In the future, you can open Putty, select the appropriate session, and click &quot;Load&quot; to load all of the settings you just created.
+* Click open.  Enter your Lambda user name when prompted.  If you are prompted for a password, then your SSH key file is not operating correctly.  Recheck these instructions and if you can't get it to work, check with Lambda's administrator.
+* If you are logged in successfully, you can either start working from the command line.  Or, just minimize this window.  Your SSH tunnel and port forwarding will be active as long as this window stays open.
+* Now you can run Remote Desktop.  When prompted for a server to connect to, '''do not use Lambda's IP address!'''  Instead, use &quot;127.0.0.1:13389&quot;.  This will connect you to local port 13389, which is now forwarded via the SSH tunnel to Lambda.  You will be prompted for your Lambda user name and password.  You may have to enter your password a couple of times...
+* To access R Studio Server, open your browser and head to: https://127.0.0.1:8787.  Again, you will be asked for your Lambda username and password.</pre>
+</div>
+<div created="20210323201918129" draft.of="Create an SSH key Pair" draft.title="Create an SSH key Pair" modified="20210324010856281" tags="Computers HowTo" title="Draft of 'Create an SSH key Pair'">
 <pre>An SSH key pair consists of two files.  The &quot;public&quot; file you can put on any computer.  It's like a lock that you can replicate and install on any computer.  Then, the private file acts like a key to that lock.  So if someone gets hold of your key, they can gain access to any computer that has your lock installed.  You can share the public file with any admin in charge of a computer you want to access.  
 
 Keep the private file safe. ''Do not share your private key with anyone else!''
