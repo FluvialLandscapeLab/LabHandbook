@@ -203,17 +203,15 @@ Error message and password prompt
 
 <li>Contents</li>
 
-<li>Create an SSH key Pair</li>
+<li>Create a Hosted Tiddlywiki</li>
 
-<li>Draft of 'How Lab Handbook was Created'</li>
+<li>Create an SSH key Pair</li>
 
 <li>Draft of 'Welcome'</li>
 
 <li>Edit the Lab Handbook</li>
 
 <li>Handbook</li>
-
-<li>How Lab Handbook was Created</li>
 
 <li>HowTo</li>
 
@@ -10171,7 +10169,7 @@ Error message and password prompt
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20210323200131245" list="[[Use Tiddlywiki]] Reference [[Draft of 'How Lab Handbook was Created']] [[Draft of 'Welcome']]" modified="20210323203433730" title="$:/StoryList">
+<div created="20210323200131245" list="[[Create a Hosted Tiddlywiki]] [[Add a New Topic to Handbook Contents]] [[Use Tiddlywiki]] Reference [[Draft of 'Welcome']]" modified="20210324013536880" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -10347,18 +10345,7 @@ To create a new entry beneath any topic, simply tag any tiddler with the name of
 <div created="20210323200250782" list-before="$:/core/ui/SideBar/Open" modified="20210323200959900" tags="$:/tags/SideBar" title="Contents">
 <pre>&lt;&lt;toc-selective-expandable 'Contents' sort[title]&gt;&gt;</pre>
 </div>
-<div created="20210323201918129" modified="20210324011032738" tags="Computers HowTo" title="Create an SSH key Pair">
-<pre>An SSH key pair consists of two files.  The &quot;public&quot; file you can put on any computer.  It's like a lock that you can replicate and install on any computer.  Then, the private file acts like a key to that lock.  So if someone gets hold of your key, they can gain access to any computer that has your lock installed.  You can share the public file with any admin in charge of a computer you want to access.  
-
-Keep the private file safe. ''Do not share your private key with anyone else!''
-
-Here are on instructions for how to create an SSH key pair:
-
-* [[Linux|https://www.howtogeek.com/424510/how-to-create-and-install-ssh-keys-from-the-linux-shell/]]
-* [[Windows|https://www.digitalocean.com/docs/droplets/how-to/add-ssh-keys/create-with-putty/]] (Note: The method referenced here requires that you install [[Putty|https://www.chiark.greenend.org.uk/~sgtatham/putty/]].  If you don't want to install Putty, you can make a key with OpenSSH, now included with windows, but I haven't tested it.  If you prefer, feel free to Google around about OpenSSH, test it, and add instructions here!)
-* [[IOS|https://docs.joyent.com/public-cloud/getting-started/ssh-keys/generating-an-ssh-key-manually/manually-generating-your-ssh-key-in-mac-os-x]]</pre>
-</div>
-<div created="20210324011546283" draft.of="How Lab Handbook was Created" draft.title="How Lab Handbook was Created" modified="20210324012900660" tags="Reference Handbook" title="Draft of 'How Lab Handbook was Created'">
+<div created="20210324011546283" modified="20210324013622392" tags="Reference Handbook" title="Create a Hosted Tiddlywiki">
 <pre>These pages are implemented using [[Tiddlywiki|https://tiddlywiki.com/]], a instant, self-contained, personal wiki that you can store on your computer for personal use. You can also host Tiddlywikis on the web for shared access.  It's pretty easy to 
 
 We are hosting this Tiddlywiki using [[Github pages|https://pages.github.com/]]; any member of the [[Fluvial Landscape Lab github organization|https://github.com/FluvialLandscapeLab]] on github can [[contribute to this wiki|Edit the Lab Handbook]].  
@@ -10370,6 +10357,17 @@ It took me maybe two hours to get the Lab Handbook working.  It will take a litt
 Tiddlywiki is free.  So are github pages.  I have a similar personal Tiddlywiki that I use to create a collection of persistent notes on the web, where I can access them from any computer or my phone.  All I had to do was turn on [[Tiddlywiki's encryption|https://tiddlywiki.com/static/Encryption.html]] and choose a secure password for myself.
 
 Amazing.  Thanks Chris!</pre>
+</div>
+<div created="20210323201918129" modified="20210324011032738" tags="Computers HowTo" title="Create an SSH key Pair">
+<pre>An SSH key pair consists of two files.  The &quot;public&quot; file you can put on any computer.  It's like a lock that you can replicate and install on any computer.  Then, the private file acts like a key to that lock.  So if someone gets hold of your key, they can gain access to any computer that has your lock installed.  You can share the public file with any admin in charge of a computer you want to access.  
+
+Keep the private file safe. ''Do not share your private key with anyone else!''
+
+Here are on instructions for how to create an SSH key pair:
+
+* [[Linux|https://www.howtogeek.com/424510/how-to-create-and-install-ssh-keys-from-the-linux-shell/]]
+* [[Windows|https://www.digitalocean.com/docs/droplets/how-to/add-ssh-keys/create-with-putty/]] (Note: The method referenced here requires that you install [[Putty|https://www.chiark.greenend.org.uk/~sgtatham/putty/]].  If you don't want to install Putty, you can make a key with OpenSSH, now included with windows, but I haven't tested it.  If you prefer, feel free to Google around about OpenSSH, test it, and add instructions here!)
+* [[IOS|https://docs.joyent.com/public-cloud/getting-started/ssh-keys/generating-an-ssh-key-manually/manually-generating-your-ssh-key-in-mac-os-x]]</pre>
 </div>
 <div created="20210323184601749" draft.of="Welcome" draft.title="Welcome" modified="20210324012930142" tags="" title="Draft of 'Welcome'">
 <pre>Welcome to the Fluvial Landscape Lab Handbook!  This online handbook is available to be read by anyone, but can be edited only by members of the Fluvial Landscape Lab.  The purpose of the handbook is to retain institutional knowledge as students come and go.
@@ -10401,19 +10399,6 @@ Now, when you make edits to this handbook and save it, the changes will be commi
 </div>
 <div created="20210323203332179" modified="20210323203345512" tags="Contents" title="Handbook">
 <pre></pre>
-</div>
-<div created="20210324011546283" modified="20210324012800091" tags="Reference Handbook" title="How Lab Handbook was Created">
-<pre>These pages are implemented using [[Tiddlywiki|https://tiddlywiki.com/]], a instant, self-contained, personal wiki that you can store on your computer for personal use. You can also host Tiddlywikis on the web for shared access.
-
-We are hosting a this Tiddlywiki using [[Github pages|https://pages.github.com/]]; any member of the [[Fluvial Landscape Lab github organization|https://github.com/FluvialLandscapeLab]] on github can [[contribute to this wiki|Edit the Lab Handbook]].  
-
-Chris Aldrich was kind enough to post some basic instructions describing [[how to create and host a system like this|https://boffosocko.com/2020/04/04/self-hosting-tiddlywiki-with-github-pages/]]. 
-
-It took me maybe two hours to get the Lab Handbook working.  It will take a little longer if you are not already familiar with github.  Regardless, it was remarkably simple, to create a powerful web-aware wiki that is editable by a specific group of people, but available to the world.  Once it is created, there is no server to maintain.  It just works.  
-
-Tiddlywiki is free.  So are github pages.  I have a similar personal Tiddlywiki that I use to create a collection of persistent notes on the web, where I can access them from any computer or my phone.  All I had to do was turn on [[Tiddlywiki's encryption|https://tiddlywiki.com/static/Encryption.html]] and choose a secure password for myself.
-
-Amazing.  Thanks Chris!</pre>
 </div>
 <div created="20210324010932913" modified="20210324010954614" tags="Contents" title="HowTo">
 <pre></pre>
