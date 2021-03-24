@@ -10266,7 +10266,7 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20210323201110110" modified="20210324010411331" tags="Computers" title="Access Lambda">
+<div created="20210323201110110" modified="20210324010821684" tags="Computers" title="Access Lambda">
 <pre>Lambda can only be accessed via SSH tunnel and, if you are off campus, only if you are logged into the MSU VPN.  
 
 Here are the steps to procure access to Lambda:
@@ -10288,10 +10288,10 @@ Once the account is set up, the details for connecting differ by operating syste
 * Be sure your private SSH key file is in the .ssh folder of your home directory on your local machine in a file called &quot;id_rsa&quot;.
 * Install Remmina Remote Desktop Client on your linux computer.
 * Run Remmina and create a new connection profile (using the plus-sign in the upper right corner of the screen).
-* At the top of the screen, give the connection profile a name -- something like &quot;Lambda via RDP&quot; (RDP is &quot;Remote Desktop Protocol&quot;) the set the protocol to RDP.
+* At the top of the screen, give the connection profile a name -- something like `Lambda via RDP` (RDP is &quot;Remote Desktop Protocol&quot;) the set the protocol to RDP.
 * On the Basic Tab enter the IP address of the computer you want to connect to (Lambda's IP ends in 1.67), enter your Lambda User Name.  (I set the Colour Depth to GFX RFX (32 bpp) for a good experience, but requires more bandwidth).  Don't enter your password -- that comes later...
-* On Advanced Tab, I set quality to Best.  Security Protocol Navigation should be &quot;Automatic,&quot; Gateway is &quot;HTTP.&quot;  Sound is &quot;Off&quot; and local microphone is &quot;0&quot;.  Everything else is blank.
-* On SSH Tunnel Tab click &quot;Enable SSH tunnel&quot; for Same server at port 22.  Again, enter your Lambda user name and choose &quot;Public Key&quot;.
+* On Advanced Tab, I set quality to Best.  Security Protocol Navigation should be `Automatic`, Gateway is `HTTP`.  Sound is `Off` and local microphone is `0`.  Everything else is blank.
+* On SSH Tunnel Tab click &quot;Enable SSH tunnel for Same server at port 22&quot;.  Again, enter your Lambda user name and choose &quot;Public Key&quot;.
 * Click &quot;Save and Connect.&quot;  You may have to enter your Lambda password a couple of times before your connection will be fully established.
 
 These setting will be saved by Remmina as a connection profile.  You can simply open Remmina and click the profile to connect in the future.
@@ -10300,9 +10300,8 @@ These setting will be saved by Remmina as a connection profile.  You can simply 
 
 * Log on to the MSU VPN.
 * Be sure your private SSH key file is in the .ssh folder of your home directory on your local machine in a file called &quot;id_rsa&quot;.
-* Open terminal and forward local port 8787 (the port RStudio Server listens on) to Lambda's port 8787.  To accomplish this, use `ssh -N yourLambdaUserName@XXX.XXX.XX1.67 -L 8080:XXX.XXX.XX1.67:8787`, being sure to use your Lambda username and replace the X's with the beginning of Lambda's IP address.
-* Importantly, the cursor will not return to this terminal window.  It looks like its hung up, but have faith.  You can minimize the terminal window if you like.
-* Open your browser and head to 127.0.0.1:8787.  You should be prompted to long into R Studio Server with your Lambda username and password.
+* Open terminal and forward local port 8787 (the port RStudio Server listens on) to Lambda's port 8787.  To accomplish this, use `ssh -N yourLambdaUserName@XXX.XXX.XX1.67 -L 8080:XXX.XXX.XX1.67:8787`, being sure to use your Lambda username and replace the X's with the beginning of Lambda's IP address.  ''Importantly, the cursor should not return to this terminal window.''  It will look like its hung up, but have faith.  You can minimize the terminal window if you like.
+* Open your browser and head to 127.0.0.1:8787.  You should be prompted to log into R Studio Server with your Lambda username and password.
 * When you are done with R Studio Server, you can go back to the terminal window and press Ctrl-C.  This will terminate the port forwarding and return you to the command prompt.
 
 ''Connecting from Windows''
