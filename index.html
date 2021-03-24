@@ -205,8 +205,6 @@ Error message and password prompt
 
 <li>Draft of 'Access Lambda'</li>
 
-<li>Draft of 'Create an SSH key Pair'</li>
-
 <li>Edit the Lab Handbook</li>
 
 <li>Handbook</li>
@@ -10154,13 +10152,13 @@ Error message and password prompt
 <div created="20210323203348222" modified="20210323203355176" title="$:/state/toc/Contents-Handbook-1843068618">
 <pre>close</pre>
 </div>
-<div created="20210323201012310" modified="20210323203401834" title="$:/state/toc/Contents-HowTo-1843068618">
+<div created="20210323201012310" modified="20210324011015428" title="$:/state/toc/Contents-HowTo-1843068618">
 <pre>close</pre>
 </div>
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20210323200131245" list="HowTo [[Add a New Topic to Handbook Contents]] [[Draft of 'Create an SSH key Pair']] [[Draft of 'Access Lambda']] Contents [[Edit the Lab Handbook]] Welcome" modified="20210323203433730" title="$:/StoryList">
+<div created="20210323200131245" list="HowTo [[Add a New Topic to Handbook Contents]] [[Create an SSH key Pair]] [[Draft of 'Access Lambda']] Contents [[Edit the Lab Handbook]] Welcome" modified="20210323203433730" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -10336,7 +10334,7 @@ To create a new entry beneath any topic, simply tag any tiddler with the name of
 <div created="20210323200250782" list-before="$:/core/ui/SideBar/Open" modified="20210323200959900" tags="$:/tags/SideBar" title="Contents">
 <pre>&lt;&lt;toc-selective-expandable 'Contents' sort[title]&gt;&gt;</pre>
 </div>
-<div created="20210323201918129" modified="20210323211453220" tags="Computers" title="Create an SSH key Pair">
+<div created="20210323201918129" modified="20210324011032738" tags="Computers HowTo" title="Create an SSH key Pair">
 <pre>An SSH key pair consists of two files.  The &quot;public&quot; file you can put on any computer.  It's like a lock that you can replicate and install on any computer.  Then, the private file acts like a key to that lock.  So if someone gets hold of your key, they can gain access to any computer that has your lock installed.  You can share the public file with any admin in charge of a computer you want to access.  
 
 Keep the private file safe. ''Do not share your private key with anyone else!''
@@ -10399,17 +10397,6 @@ These setting will be saved by Remmina as a connection profile.  You can simply 
 * If you are logged in successfully, you can either start working from the command line.  Or, just minimize this window.  Your SSH tunnel and port forwarding will be active as long as this window stays open.
 * Now you can run Remote Desktop.  When prompted for a server to connect to, '''do not use Lambda's IP address!'''  Instead, use &quot;127.0.0.1:13389&quot;.  This will connect you to local port 13389, which is now forwarded via the SSH tunnel to Lambda.  You will be prompted for your Lambda user name and password.  You may have to enter your password a couple of times...
 * To access R Studio Server, open your browser and head to: https://127.0.0.1:8787.  Again, you will be asked for your Lambda username and password.</pre>
-</div>
-<div created="20210323201918129" draft.of="Create an SSH key Pair" draft.title="Create an SSH key Pair" modified="20210324010856281" tags="Computers HowTo" title="Draft of 'Create an SSH key Pair'">
-<pre>An SSH key pair consists of two files.  The &quot;public&quot; file you can put on any computer.  It's like a lock that you can replicate and install on any computer.  Then, the private file acts like a key to that lock.  So if someone gets hold of your key, they can gain access to any computer that has your lock installed.  You can share the public file with any admin in charge of a computer you want to access.  
-
-Keep the private file safe. ''Do not share your private key with anyone else!''
-
-Here are on instructions for how to create an SSH key pair:
-
-* [[Linux|https://www.howtogeek.com/424510/how-to-create-and-install-ssh-keys-from-the-linux-shell/]]
-* [[Windows|https://www.digitalocean.com/docs/droplets/how-to/add-ssh-keys/create-with-putty/]] (Note: The method referenced here requires that you install [[Putty|https://www.chiark.greenend.org.uk/~sgtatham/putty/]].  If you don't want to install Putty, you can make a key with OpenSSH, now included with windows, but I haven't tested it.  If you prefer, feel free to Google around about OpenSSH, test it, and add instructions here!)
-* [[IOS|https://docs.joyent.com/public-cloud/getting-started/ssh-keys/generating-an-ssh-key-manually/manually-generating-your-ssh-key-in-mac-os-x]]</pre>
 </div>
 <div created="20210323191527931" modified="20210323203425792" tags="Handbook" title="Edit the Lab Handbook">
 <pre>In order to edit the lab handbook, you must:
