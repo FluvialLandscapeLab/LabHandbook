@@ -235,8 +235,6 @@ Error message and password prompt
 
 <li>Create Lambda Users</li>
 
-<li>Draft of 'Backup your Lambda directory'</li>
-
 <li>Draft of 'Creating Lambda Users'</li>
 
 <li>Draft of 'Get Handbook Editing Privileges'</li>
@@ -10243,7 +10241,7 @@ Error message and password prompt
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20210903151543722" list="[[Create Lambda Users]] [[Draft of 'Backup your Lambda directory']] [[Draft of 'Get Handbook Editing Privileges']] Welcome" modified="20210903152138282" title="$:/StoryList">
+<div created="20210903151543722" list="[[Create Lambda Users]] [[Backup your Lambda directory]] [[Draft of 'Get Handbook Editing Privileges']] Welcome" modified="20210903152138282" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -10422,7 +10420,7 @@ These setting will be saved by Remmina as a connection profile.  You can simply 
 
 To create a new entry beneath any topic, simply tag any tiddler with the name of the topic.</pre>
 </div>
-<div created="20210903151601911" modified="20210903154638091" tags="Lambda HowTo" title="Backup your Lambda directory">
+<div created="20210903151601911" modified="20210903154819543" tags="Lambda HowTo" title="Backup your Lambda directory">
 <pre>There is an internal drive that serves as backup for Lambda, and you are responsible for setting up a backup scheme for your files on Lambda!
 
 # ''Check to be sure you have a backup folder. '' 
@@ -10436,9 +10434,9 @@ ls -l
 
 In the list of folders, you should see something like this:
 
-`drwx------ 2 YourUserName    YourUserName    4096 Sep  3 07:38 YourUserName`
+`drwx------ 2 &lt;YourUser&gt;  &lt;YourUser&gt;  4096 Sep  3 07:38 &lt;YourUser&gt;`
 
-Be sure the privileges are as shown above -- `drwx------`
+Where &lt;YourUser&gt; is your Lambda user name.  Be sure the privileges are as shown above -- `drwx------`
 
 # ''Set up automatic backup.'' 
 
@@ -10504,42 +10502,6 @@ Remember to provide sudo privileges if appropriate:
 `sudo usermod -aG sudo &lt;username&gt;`
 
 Also, set up a folder on the root of the backup drive and set the privileges to RWX for user only.</pre>
-</div>
-<div created="20210903151601911" draft.of="Backup your Lambda directory" draft.title="Backup your Lambda directory" modified="20210903154809049" tags="Lambda HowTo" title="Draft of 'Backup your Lambda directory'">
-<pre>There is an internal drive that serves as backup for Lambda, and you are responsible for setting up a backup scheme for your files on Lambda!
-
-# ''Check to be sure you have a backup folder. '' 
-
-A backup folder should be available to you on the backup drive. To check to be sure it's there, open a terminal window on Lambda and issue the following commands:
-
-````
-cd /backup
-ls -l
-````
-
-In the list of folders, you should see something like this:
-
-`drwx------ 2 &lt;YourUser&gt;  &lt;YourUser&gt;  4096 Sep  3 07:38 &lt;YourUser&gt;`
-
-Where &lt;YourUser&gt; is your Lambda user name.  Be sure the privileges are as shown above -- `drwx------`
-
-# ''Set up automatic backup.'' 
-
-Open &quot;Activities&quot; on Lambda.  In the &quot;Search&quot; panel at the top of the screen, type &quot;Backups&quot; and then click the &quot;Backups&quot; utility.
-
-Click through the menu on the left of the resulting screen.
-
-Under &quot;Folders to save&quot; be sure you home directory is listed.  You shouldn't need to back up anything else.
-
-Under &quot;Folders to ignore&quot; please be sure &quot;Trash&quot; and '~/Downloads' are listed.
-
-Under &quot;Storage location&quot; choose &quot;Local Folder&quot; from the dropdown menu and enter &quot;/backup/&lt;YourUserName&gt; as the folder, replacing &lt;YourUserName&gt; with... well... your Lambda user name.
-
-Under &quot;Scheduling&quot; choose weekly backup and keep for six months.  Be sure the slider is &quot;on&quot; (to the right and blue, rather than to the left and grey) to enable the automatic backup.
-
-# Run your first backup manually.  Click back to the &quot;Overview&quot; pane and choose &quot;Backup now.&quot;
-
-That's it!  Your backup should run weekly.  Check your /backup/YourUserName folder in a few weeks to be sure that there are multiple backup files -- one for each week you made changes to your files on Lambda.</pre>
 </div>
 <div modified="20210324054613329" title="Draft of 'Creating Lambda Users'">
 <pre></pre>
