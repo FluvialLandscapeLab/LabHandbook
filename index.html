@@ -237,8 +237,6 @@ Error message and password prompt
 
 <li>Draft of 'Creating Lambda Users'</li>
 
-<li>Draft of 'Get Handbook Editing Privileges'</li>
-
 <li>Edit the handbook</li>
 
 <li>Get Handbook Editing Privileges</li>
@@ -10241,7 +10239,7 @@ Error message and password prompt
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20210903151543722" list="[[Create Lambda Users]] [[Backup your Lambda directory]] [[Draft of 'Get Handbook Editing Privileges']] Welcome" modified="20210903155453308" title="$:/StoryList">
+<div created="20210903151543722" list="[[Create Lambda Users]] [[Backup your Lambda directory]] [[Get Handbook Editing Privileges]] Welcome" modified="20210903155453308" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -10508,19 +10506,6 @@ Also, set up a folder on the root of the backup drive and set the privileges to 
 <div modified="20210324054613329" title="Draft of 'Creating Lambda Users'">
 <pre></pre>
 </div>
-<div created="20210323191527931" draft.of="Get Handbook Editing Privileges" draft.title="Get Handbook Editing Privileges" modified="20210903152100073" tags="Handbook HowTo" title="Draft of 'Get Handbook Editing Privileges'">
-<pre>In order to edit the lab handbook, you must:
-
-# Be a member of the &quot;Fluvial Landscape Lab&quot; organization on Github.
-# [[Create a Personal Access Token|https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token]] that has &quot;Repo&quot; scope and all subscopes; press the little clipboard icon next to the resulting token to copy it.
-# Open the [[Lab Handbook Control Panel|$:/ControlPanel]]; choose the &quot;Saving&quot; tab and the &quot;Github Saver&quot; tab.
-# Enter your github user name and paste the token into the &quot;Password&quot; box.
-# Close the control panel with the &quot;X&quot; icon in the upper right corner of the control panel tiddler (no need to save).
-
-Now, when you make edits to this handbook and save it, the changes will be committed to the github repository and automatically served to the web interface!
-
-''Note'':  You will need to repeat this process for each browser or computer you use to edit the wiki.  If you want to make a note of your Personal Authentication Token (e.g., in your phone) it will save you from having to create a new token every time you have to edit the wiki from a different computer.</pre>
-</div>
 <div created="20210324015714430" modified="20210324044319694" tags="Handbook HowTo" title="Edit the handbook">
 <pre>Before you can edit, you have to [[establish your handbook editing privileges|Get Handbook Editing Privileges]].  
 
@@ -10532,11 +10517,11 @@ Once you have privileges, you can create a new tiddler (a unit of information, l
 
 Best practices and experience suggest that small, atomic tiddlers with cross links among them are the most efficient way to organize information in a Tiddlywiki.  So parcel the information carefully and [[create links among tiddlers|https://tiddlywiki.com/static/Using%2520links%2520to%2520navigate%2520between%2520tiddlers.html]] and [[external links|https://tiddlywiki.com/static/Linking%2520in%2520WikiText.html]] to the rest of the web.</pre>
 </div>
-<div created="20210323191527931" modified="20210903151249268" tags="Handbook HowTo" title="Get Handbook Editing Privileges">
+<div created="20210323191527931" modified="20210903160111622" tags="Handbook HowTo" title="Get Handbook Editing Privileges">
 <pre>In order to edit the lab handbook, you must:
 
 # Be a member of the &quot;Fluvial Landscape Lab&quot; organization on Github.
-# [[Create a Personal Access Token|https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token]] that has &quot;Repo&quot; scope and all subscopes; press the little clipboard icon next to the resulting token to copy it.
+# [[Create a Personal Access Token|https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token]] that has &quot;Repo&quot; scope and all subscopes; press the little clipboard icon next to the resulting token to copy it.  (There is a [[friendlier guide to creating a personal access token|https://boffosocko.com/2020/04/04/self-hosting-tiddlywiki-with-github-pages/]] for tiddlywiki, but you'll need to search the resulting page for &quot;Setting up personal access tokens&quot; because the instructions are sort of buried.)
 # Open the [[Lab Handbook Control Panel|$:/ControlPanel]]; choose the &quot;Saving&quot; tab and the &quot;Github Saver&quot; tab.
 # Enter your github user name and paste the token into the &quot;Password&quot; box.
 # Close the control panel with the &quot;X&quot; icon in the upper right corner of the control panel tiddler (no need to save).
