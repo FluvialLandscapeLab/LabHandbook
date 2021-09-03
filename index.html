@@ -10420,10 +10420,10 @@ These setting will be saved by Remmina as a connection profile.  You can simply 
 
 To create a new entry beneath any topic, simply tag any tiddler with the name of the topic.</pre>
 </div>
-<div created="20210903151601911" modified="20210903155304532" tags="Lambda HowTo" title="Backup your Lambda directory">
+<div created="20210903151601911" modified="20210903155429282" tags="Lambda HowTo" title="Backup your Lambda directory">
 <pre>There is an internal drive that serves as backup for Lambda, and you are responsible for setting up a backup scheme for your files on Lambda!
 
-# ''Check to be sure you have a backup folder. '' 
+''Check to be sure you have a backup folder. '' 
 
 A backup folder should be available to you on the backup drive. To check to be sure it's there, open a terminal window on Lambda and issue the following commands:
 
@@ -10438,21 +10438,23 @@ In the list of folders, you should see something like this:
 
 Where &quot;YourUser&quot; is your Lambda user name.  Be sure the privileges are as shown above -- `drwx------`
 
-# ''Set up automatic backup.'' 
+''Set up automatic backup.'' 
 
 Open &quot;Activities&quot; on Lambda.  In the &quot;Search&quot; panel at the top of the screen, type &quot;Backups&quot; and then click the &quot;Backups&quot; utility.
 
 Click through the menu on the left of the resulting screen.
 
-Under &quot;Folders to save&quot; be sure you home directory is listed.  You shouldn't need to back up anything else.
+# Under &quot;Folders to save&quot; be sure you home directory is listed.  You shouldn't need to back up anything else.
 
-Under &quot;Folders to ignore&quot; please be sure &quot;Trash&quot; and '~/Downloads' are listed.
+# Under &quot;Folders to ignore&quot; please be sure &quot;Trash&quot; and '~/Downloads' are listed.
 
-Under &quot;Storage location&quot; choose &quot;Local Folder&quot; from the dropdown menu and enter &quot;/backup/&lt;YourUserName&gt; as the folder, replacing &lt;YourUserName&gt; with... well... your Lambda user name.
+# Under &quot;Storage location&quot; choose &quot;Local Folder&quot; from the dropdown menu and enter &quot;/backup/YourUserName as the folder, replacing &quot;YourUserName&quot; with... well... your Lambda user name.
 
-Under &quot;Scheduling&quot; choose weekly backup and keep for six months.  Be sure the slider is &quot;on&quot; (to the right and blue, rather than to the left and grey) to enable the automatic backup.
+# Under &quot;Scheduling&quot; choose weekly backup and keep for six months.  Be sure the slider is &quot;on&quot; (to the right and blue, rather than to the left and grey) to enable the automatic backup.
 
-# Run your first backup manually.  Click back to the &quot;Overview&quot; pane and choose &quot;Backup now.&quot;
+''Run your first backup manually.''  
+
+Click back to the &quot;Overview&quot; pane and choose &quot;Backup now.&quot;
 
 That's it!  Your backup should run weekly.  Check your /backup/YourUserName folder in a few weeks to be sure that there are multiple backup files -- one for each week you made changes to your files on Lambda.</pre>
 </div>
