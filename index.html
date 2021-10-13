@@ -265,6 +265,8 @@ Error message and password prompt
 
 <li>Install public ssh key</li>
 
+<li>Installation troubleshooting</li>
+
 <li>Java + Eclipse</li>
 
 <li>Lambda</li>
@@ -10280,7 +10282,7 @@ Error message and password prompt
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20211013213437607" list="[[Git and Eclipse]] [[Java + Eclipse]] Install TempTool" modified="20211013220428847" title="$:/StoryList">
+<div created="20211013213437607" list="[[Installation troubleshooting]] Install TempTool" modified="20211013220428847" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -10613,6 +10615,20 @@ don't forget to:
 `chown &lt;user&gt;:&lt;group&gt; .ssh`
 
 Alternatively , explore the `ssh-add` command.  Probably a better solution.</pre>
+</div>
+<div created="20211013220803348" modified="20211013223007743" tags="Install" title="Installation troubleshooting">
+<pre>* No &quot;J&quot; icon in the upper right-hand corner of the neo2 package icon
+** This means the &quot;Project Natures&quot; property isn't recognizing that this is a Java project. 
+** Open the .project file in a text editor. It should have &quot;org.eclipse.jdt.core.javanature&quot; in the natures tag.
+** My solution was not to change the .project file directly, but to fix some folder errors:
+*** when I inported neo2 from github, it created a neo2 folder within another neo2 folder. Both neo2 folders had a .project file in them, but the .project file in the upper level neo2 folder had only the project name tag filled in and not the buildCommand or the natures tag filled in correctly. So, I un-nested the neo2 folders and replaced the upper-level .project file with the correct, lower-level .project file. To un-nest, you copy everything within the lower-level neo2 folder into the upper-level neo2 folder and just click replace when file explorer asks you which copy of .project to keep.
+
+* JUNG library is pointing to file-paths which don't exist on the computer you are trying to install neo2 on
+** Download JUNG library from [[sourceforge|https://sourceforge.net/projects/jung/files/jung/jung-2.0.1/]] (choose the download &quot;jung2-2_0_1.zip&quot;)
+** Extract Zip file into neo2/lib/JUNG folder (I had to create the lib and JUNG folders in the neo2 directory)
+** Back in Eclipse, right-click neo2, go to Build Path &gt; Configure Build Path. In the &quot;Libraries&quot; tab, under &quot;Classpath&quot; click on a jar (which should have a little red x on it) and click &quot;Edit...&quot;. Browse to your local JUNG library folder and find the jar you clicked on and click &quot;Open&quot;. This should change the file path next to the jar and get rid of the red x. Repeat for all jars.
+
+</pre>
 </div>
 <div created="20211013213142000" modified="20211013214135771" tags="Computing" title="Java + Eclipse">
 <pre>Download and install Java SE runtime Environment from the [[Oracle Website|https://www.oracle.com/java/technologies/downloads/]].
