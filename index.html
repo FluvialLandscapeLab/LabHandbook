@@ -10282,7 +10282,7 @@ Error message and password prompt
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20211013213437607" list="[[Installation troubleshooting]] Install TempTool" modified="20211013220428847" title="$:/StoryList">
+<div created="20211013213437607" list="[[Edit the handbook]] [[Use Tiddlywiki]] [[Get Handbook Editing Privileges]] [[Installation troubleshooting]] Install TempTool" modified="20211013224841183" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -10616,7 +10616,7 @@ don't forget to:
 
 Alternatively , explore the `ssh-add` command.  Probably a better solution.</pre>
 </div>
-<div created="20211013220803348" modified="20211013223007743" tags="Install" title="Installation troubleshooting">
+<div created="20211013220803348" modified="20211013225135862" tags="Install" title="Installation troubleshooting">
 <pre>* No &quot;J&quot; icon in the upper right-hand corner of the neo2 package icon
 ** This means the &quot;Project Natures&quot; property isn't recognizing that this is a Java project. 
 ** Open the .project file in a text editor. It should have &quot;org.eclipse.jdt.core.javanature&quot; in the natures tag.
@@ -10628,7 +10628,11 @@ Alternatively , explore the `ssh-add` command.  Probably a better solution.</pre
 ** Extract Zip file into neo2/lib/JUNG folder (I had to create the lib and JUNG folders in the neo2 directory)
 ** Back in Eclipse, right-click neo2, go to Build Path &gt; Configure Build Path. In the &quot;Libraries&quot; tab, under &quot;Classpath&quot; click on a jar (which should have a little red x on it) and click &quot;Edit...&quot;. Browse to your local JUNG library folder and find the jar you clicked on and click &quot;Open&quot;. This should change the file path next to the jar and get rid of the red x. Repeat for all jars.
 
-</pre>
+* ~MySQL JDBC connector is pointing to file-paths which don't exist on the computer you are trying to install neo2 on
+** Similar to the JUNG library errors as above, make sure the ~MySQL connector is installed (on windows it installs into the &quot;Program Files(x86)/~MySQL/Connector J&quot; folder)
+** Then, edit the Build Path of neo2, making sure the mysql-connector-java jar is pointing to the correct file location 
+
+* Solving the Build Path errors in neo2 solved the Build Path error of temperatureModel</pre>
 </div>
 <div created="20211013213142000" modified="20211013214135771" tags="Computing" title="Java + Eclipse">
 <pre>Download and install Java SE runtime Environment from the [[Oracle Website|https://www.oracle.com/java/technologies/downloads/]].
