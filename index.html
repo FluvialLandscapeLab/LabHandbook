@@ -283,6 +283,8 @@ Error message and password prompt
 
 <li>Troubleshooting</li>
 
+<li>Update R Studio Server on Lambda</li>
+
 <li>Use Tiddlywiki</li>
 
 <li>Welcome</li>
@@ -10234,7 +10236,7 @@ Error message and password prompt
 <div created="20210323185449560" modified="20210323191319693" title="$:/state/tab/moresidebar-1850697562">
 <pre>$:/core/ui/MoreSideBar/Orphans</pre>
 </div>
-<div created="20210323184927671" modified="20210324031153999" title="$:/state/tab/sidebar--595412856">
+<div created="20210323184927671" modified="20211015165305787" title="$:/state/tab/sidebar--595412856">
 <pre>Contents</pre>
 </div>
 <div created="20210323202920846" modified="20210324054619669" title="$:/state/toc/Contents-Computers-1843068618">
@@ -10267,8 +10269,8 @@ Error message and password prompt
 <div created="20210324054809483" modified="20211012201145068" title="$:/state/toc/Contents/Computing-Lambda-1843068618">
 <pre>close</pre>
 </div>
-<div created="20210324055012019" modified="20211012195052979" title="$:/state/toc/Contents/Computing-Linux-1843068618">
-<pre>close</pre>
+<div created="20210324055012019" modified="20211015164044002" title="$:/state/toc/Contents/Computing-Linux-1843068618">
+<pre>open</pre>
 </div>
 <div created="20211013220744602" modified="20211013220744602" title="$:/state/toc/Contents/Computing-TempTool-1843068618">
 <pre>open</pre>
@@ -10282,7 +10284,7 @@ Error message and password prompt
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20211013213437607" list="[[Edit the handbook]] [[Use Tiddlywiki]] [[Get Handbook Editing Privileges]] [[Installation troubleshooting]] Install TempTool" modified="20211013224841183" title="$:/StoryList">
+<div created="20211015165325725" list="[[Update R Studio Server on Lambda]] Welcome" modified="20211015165325725" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -10666,6 +10668,28 @@ Finally, saving takes about 5 seconds to save the wiki on github.  If the save s
 </div>
 <div created="20211012200046484" modified="20211012201140532" tags="[[Git + GitHub + RStudio]]" title="Troubleshooting">
 <pre></pre>
+</div>
+<div created="20211015164051812" modified="20211015165045146" tags="Linux Lambda HowTo" title="Update R Studio Server on Lambda">
+<pre>Here are some nice instructions for updating R Studio Server on Lambda.  
+
+It would be good to update and upgrade before installing the version of rstudio server, tho.  So maybe:
+
+sudo apt update
+sudo apt upgrade
+
+before installing the new version.
+
+Then, look for the section entitled ''Upgrading to a later version of RStudio Workbench or RStudio Server''.  There were 6 steps at the time this tiddler was written.  
+
+https://support.rstudio.com/hc/en-us/articles/216079967-Upgrading-RStudio-Server
+
+Step 4 says &quot;install the new version of the server.&quot; 
+
+To download the .deb file and install, I used the instructions at the link below, under ''Install for Debian 10 / Ubuntu 18 / Ubuntu 20''.  There is no need to run:
+
+sudo apt-get install gdebi-core
+
+because gdebi is already installed.  </pre>
 </div>
 <div created="20210324012935547" modified="20210324013502033" tags="HowTo Handbook" title="Use Tiddlywiki">
 <pre>[[Tiddlywiki|https://tiddlywiki.com/]] is an entire wiki contained in a single html file!
