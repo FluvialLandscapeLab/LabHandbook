@@ -251,6 +251,8 @@ Error message and password prompt
 
 <li>Draft of 'Creating Lambda Users'</li>
 
+<li>Draft of 'New Tiddler'</li>
+
 <li>Edit the handbook</li>
 
 <li>Get Handbook Editing Privileges</li>
@@ -10293,7 +10295,7 @@ Error message and password prompt
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20220508205136622" list="[[Get Handbook Editing Privileges]] $:/ControlPanel [[Edit the handbook]] Welcome" modified="20220508205249151" title="$:/StoryList">
+<div created="20220508205136622" list="[[Draft of 'New Tiddler']] [[Get Handbook Editing Privileges]] [[Edit the handbook]] Welcome" modified="20220508205249151" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -10562,6 +10564,31 @@ Also, set up a folder on the root of the backup drive and set the privileges to 
 </div>
 <div modified="20210324054613329" title="Draft of 'Creating Lambda Users'">
 <pre></pre>
+</div>
+<div created="20220508205607661" draft.of="New Tiddler" draft.title="Export from R to Powerpoint" modified="20220508210501633" tags="Computing R" title="Draft of 'New Tiddler'">
+<pre>Here is a really cool package for exporting from R directly to a power point file.  The graphics can be ungrouped and edited:
+
+https://github.com/tomwenseleers/export
+
+To install, close RStudio and re-open without a project open. (The `export` package is dependent on lots of other packages and none can be loaded during install.)  Then run the following
+
+`remotes::install_github(
+  &quot;https://github.com/tomwenseleers/export&quot;,
+  build_opts = c(&quot;--no-resave-data&quot;, &quot;--no-manual&quot;),
+  force = T
+)`
+
+You might be asked to update other package.  I chose to update CRAN only and it worked well.
+
+Then, In R, I created a list of ggplot objects (in `finalPlots`) and ran the following code:
+
+`export::graph2office(finalPlots[[1]], file = &quot;SFSPlots&quot;, type = &quot;PPT&quot;)
+for(p in finalPlots[-1]) {
+  export::graph2office(p, file = &quot;SFSPlots&quot;, type = &quot;PPT&quot;, append = T)
+}`
+
+All my plots were in &quot;SFSPlots.pptx&quot; in the home directory of my R project.
+</pre>
 </div>
 <div created="20210324015714430" modified="20210324044319694" tags="Handbook HowTo" title="Edit the handbook">
 <pre>Before you can edit, you have to [[establish your handbook editing privileges|Get Handbook Editing Privileges]].  
