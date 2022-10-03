@@ -10309,7 +10309,7 @@ Error message and password prompt
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20220628201422032" list="[[Edit the handbook]] [[Get Handbook Editing Privileges]] [[Fix need to enter password multiple times]] [[Update R Studio Server on Lambda]] Welcome" modified="20220628201759769" title="$:/StoryList">
+<div created="20221003130128712" list="[[Edit the handbook]] [[Get Handbook Editing Privileges]] [[Create Lambda Users]] Welcome" modified="20221003130819252" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -10563,12 +10563,14 @@ Here are on instructions for how to create an SSH key pair:
 * [[Windows|https://www.digitalocean.com/docs/droplets/how-to/add-ssh-keys/create-with-putty/]] (Note: The method referenced here requires that you install [[Putty|https://www.chiark.greenend.org.uk/~sgtatham/putty/]].  If you don't want to install Putty, you can make a key with OpenSSH, now included with windows, but I haven't tested it.  If you prefer, feel free to Google around about OpenSSH, test it, and add instructions here!)
 * [[IOS|https://docs.joyent.com/public-cloud/getting-started/ssh-keys/generating-an-ssh-key-manually/manually-generating-your-ssh-key-in-mac-os-x]]</pre>
 </div>
-<div created="20210324054008350" modified="20210903152240115" tags="HowTo Linux Lambda" title="Create Lambda Users">
+<div created="20210324054008350" modified="20221003130705621" tags="HowTo Linux Lambda" title="Create Lambda Users">
 <pre>The command
 
-` sudo adduser &lt;username&gt;`
+` sudo -m adduser &lt;username&gt;`
 
 creates a user profile after a brief set of questions.  Bash shell is the default, which helps with running techplot and HGS.
+
+-m create a user directory automatically.
 
 Remember to provide sudo privileges if appropriate:
 
